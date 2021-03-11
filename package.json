@@ -11,7 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "connection": "^1.4.0",
+    "console.table": "^0.10.0",
+    "ctable": "^0.0.3",
+    "dotenv": "^8.2.0",
     "inquirer": "^8.0.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
   }
 }
