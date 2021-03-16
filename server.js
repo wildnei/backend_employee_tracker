@@ -54,7 +54,7 @@ function init() {
         name: "start",
         message: "Select one of the options",
         choices: ["\u001b[34;1m View All Employees", "\u001b[34;1m View All Roles", "\u001b[34;1m View All Departments", "\u001b[34;1m View All Employees By Department",
-            "\u001b[34;1m View All Employees By Manager",
+            // "\u001b[34;1m View All Employees By Manager",
             "\u001b[1;33m Add Employee", "\u001b[1;31m Remove Employee", "\u001b[1;32m Update Employee Role", "\u001b[1;33m Add Employee Role",
             "\u001b[1;31m Remove Role", "\u001b[1;33m Add New Department", "\u001b[1;31m Remove Department", new inquirer.Separator('*******************')]
     })
@@ -220,7 +220,7 @@ function displayEmployeeByDep() {
 function addEmployee() {
     let addQuery = `SELECT employee.id, employee.first_name, employee.last_name, employee.role_id, role.title, department.name,
     role.salary, employee.manager_id 
-    FROM employee INNER JOIN role on role.id = employee.role_id
+    FROM employee INNER JOIN role ON role.id = employee.role_id
     INNER JOIN department ON department.id = role.department_id`
 
     let addQuery2 = `SELECT * FROM role`
@@ -259,7 +259,7 @@ function addEmployee() {
                     name: "role",
                     message: "Please select employee title",
                     choices: roleResults.map(role => {
-                        return { name: role.title, value: role.role_id }
+                        return { name: role.title, value: role.id }
                     }),
                 },
 
@@ -282,6 +282,9 @@ function addEmployee() {
         });
     });
 };
+
+
+
 
 function removeEmployee() {
     let query1 = `SELECT * FROM employee`
@@ -371,7 +374,7 @@ function updateEmpRole() {
                             connection.query(query1, [input2.roleId, input1.employeeId], function (err, res) {
                                 var tempPosition;
                                 // return the updated position
-                                for (var i = 0; k < roles.length; i++) {
+                                for (var i = 0; i < roles.length; i++) {
                                     if (roles[i].value == input2.roleId) {
                                         tempPosition = roles[i].name;
                                     }

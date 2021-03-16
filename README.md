@@ -3,7 +3,6 @@
 ## Table of Contents
 
 * [Description](#description)
-* [Link to Deployed Application](#Link-to-deployed-application)
 * [How to Execute Application](#How-to-execute-application)
 * [Example](#example)
 * [Contact Information](#Contact-information)
@@ -16,18 +15,14 @@ Employee Management Tool
 
 This app enables you to create and manage a team of employees and managers for your company
 
-## Link to deployed application
-
-[Open Application](https://sleepy-dusk-87257.herokuapp.com/)
 
 ## Technologies needed to execute the code in NODE.JS
 
-``` npm install express / npm install mysql2 / npm install inquirer / npm install dotenv / npm install console.table / npm install sequelize  ```
+``` npm install express / npm install mysql2 / npm install inquirer / npm install dotenv / npm install console.table  ```
 
 ## Example
 
-
-![Image](https://ik.imagekit.io/devdojo/readme_gif/Note_taker_7PBLWKinv.gif)
+![Image](https://ik.imagekit.io/devdojo/readme_gif/backendemployee_kePmCKeXa.gif)
 
 ## Project Owner
 
